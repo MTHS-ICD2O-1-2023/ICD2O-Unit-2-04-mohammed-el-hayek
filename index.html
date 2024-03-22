@@ -1,9 +1,92 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-ca">
   <head>
-    <title>Title</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="Area of the Tringle" />
+    <meta name="keywords" content="MTHS, ISC2O" />
+    <mate name="auther" content="Mohammed El-Hayek" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-purple.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Area for Tringle</title>
   </head>
   <body>
-    <p>Paragraph</p>
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="./js/script.js"></script>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <span class="mdl-layout-title">Area and Perimeter, for Tringle</span>
+        </div>
+      </header>
+      <main class="mdl-layout__content">
+        <table>
+          <tr>
+            <th>
+              <img src="./images/Tringle.png" alt="Tringle" width="75%" height="auto" />
+            </th>
+            <th>
+              <h2>Formulas</h2>
+              <h3>A = (b x h) ÷ 2</h3>
+              <h3>P = a + b + c</h3>
+            </th>
+          </tr>
+        </table>
+        <!-- Simple Textfield -->
+        <form action="#">
+          <p>{H}</p>
+          <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="H of Triangle" />
+            <label class="mdl-textfield__label" for="length-of-rectangle">{h}.....</label>
+            <span class="mdl-textfield__error">Input is not a number!</span>
+            </div>
+        </form>
+        <!-- Numeric Textfield -->
+        <form action="#">
+          <p>{B}</p>
+          <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="B of Triangle" />
+            <label class="mdl-textfield__label" for="width-of-rectangle">{b}....</label>
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div>
+        </form>
+        <br />
+        <!-- Numeric Textfield -->
+        <form action="#">
+          <p>{A}</p>
+          <div class="mdl-textfield mdl-js-textfield">
+          <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="A of Triangle" />
+          <label class="mdl-textfield__label" for="width-of-rectangle">{A}....</label>
+          <span class="mdl-textfield__error">Input is not a number!</span>
+        </div>
+      </form>
+      <br />
+      <!-- Numeric Textfield -->
+      <form action="#">
+        <p>{C}</p>
+        <div class="mdl-textfield mdl-js-textfield">
+          <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="C of Triangle" />
+          <label class="mdl-textfield__label" for="width-of-rectangle">{C}....</label>
+          <span class="mdl-textfield__error">Input is not a number!</span>
+        </div>
+        </form>
+        <br />
+        <!-- Raised button with ripple -->
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+          onclick="calculate()">
+          Calculate
+          </button>
+        <br />
+      <div id="answers">
+        <div id="area"></div>
+        <div id="perimeter"></div>
+          </div>
+      </main>
+    </div>
   </body>
 </html>
